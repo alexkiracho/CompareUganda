@@ -1,0 +1,160 @@
+export default function CompareUgandaHome() {
+const categories = [
+{ name: "Mobile Phones", icon: "📱", stores: 45 },
+{ name: "Laptops", icon: "💻", stores: 28 },
+{ name: "TVs & Electronics", icon: "📺", stores: 31 },
+{ name: "Supermarket", icon: "🛒", stores: 62 },
+{ name: "Insurance", icon: "🛡️", stores: 14 },
+{ name: "Property", icon: "🏠", stores: 19 },
+];
+ 
+const deals = [
+{
+name: "iPhone 15 128GB",
+lowest: "UGX 3,250,000",
+highest: "UGX 3,650,000",
+saving: "UGX 400,000",
+},
+{
+name: "Samsung Galaxy S24",
+lowest: "UGX 2,850,000",
+highest: "UGX 3,150,000",
+saving: "UGX 300,000",
+},
+{
+name: "Hisense 55 Smart TV",
+lowest: "UGX 1,550,000",
+highest: "UGX 1,900,000",
+saving: "UGX 350,000",
+},
+];
+ 
+return (
+<div className="min-h-screen bg-slate-50">
+<nav className="bg-green-700 text-white px-6 py-4 flex justify-between items-center">
+<div className="text-2xl font-bold">CompareUganda</div>
+<div className="space-x-6 hidden md:block">
+<a href="#" /a>
+<a href="#" className="hover:text-green-200 <a href="#" className</div>
+</nav>
+ 
+<section className="bg-gradient-to-r from-green-700 to-green-500 text-white py-20 px-6">
+<div className="max-w-6xl mx-auto text-center">
+<h1 className="text-5xl font-bold mb-4">
+Compare Prices Across Uganda
+</h1>
+<p className="text-xl mb-8">
+Find the best prices on phones, electronics, insurance,
+supermarkets, property and more.
+</p>
+ 
+<div className="max-w-3xl mx-auto bg-white rounded-3xl p-3 flex shadow-xl">
+<input
+type="text"
+placeholder="Search products, services or stores..."
+className="flex-1 px-4 py-3 rounded-2xl text-black outline-none"
+/>
+<button className="bg-green-700 text-white px-8 rounded-2xl font-semibold">
+Compare
+</button>
+</div>
+</div>
+</section>
+ 
+<section className="max-w-6xl mx-auto py-16 px-6">
+<h2 className="text-3xl font-bold mb-8 text-center">
+Popular Categories
+</h2>
+ 
+<div className="grid md:grid-cols-3 lg:grid-cols-6 gap-5">
+{categories.map((cat) => (
+<div
+key={cat.name}
+className="bg-white rounded-3xl p-6 text-center shadow hover:shadow-lg transition"
+>
+<div className="text-4xl mb-3">{cat.icon}</div>
+<h3 className="font-semibold">{cat.name}</h3>
+<p className="text-gray-500 text-sm">
+{cat.stores} stores
+</p>
+</div>
+))}
+</div>
+</section>
+ 
+<section className="bg-white py-16">
+<div className="max-w-6xl mx-auto px-6">
+<h2 className="text-3xl font-bold mb-8 text-center">
+Today's Best Savings
+</h2>
+ 
+<div className="grid md:grid-cols-3 gap-6">
+{deals.map((deal) => (
+<div
+key={deal.name}
+className="border rounded-3xl p-6 shadow-sm"
+>
+<h3 className="font-bold text-lg">{deal.name}</h3>
+<div className="mt-4">
+<p>Lowest Price: <span className="text-green-700 font-bold">{deal.lowest}</span></p>
+<p>Highest Price: {deal.highest}</p>
+<p className="mt-3 text-red-600 font-semibold">
+Save {deal.saving}
+</p>
+</div>
+</div>
+))}
+</div>
+</div>
+</section>
+ 
+<section className="max-w-6xl mx-auto py-16 px-6">
+<div className="bg-green-700 text-white rounded-3xl p-10 text-center">
+<h2 className="text-3xl font-bold mb-4">
+For Businesses
+</h2>
+<p className="mb-6">
+List your products and services on CompareUganda and reach
+thousands of Ugandan shoppers.
+</p>
+ 
+<button className="bg-white text-green-700 px-8 py-3 rounded-2xl font-bold">
+Add Your Business
+</button>
+</div>
+</section>
+ 
+<footer className="bg-slate-900 text-white py-10">
+<div className="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+<div>
+<h3 className="font-bold text-xl mb-3">CompareUganda</h3>
+<p className="text-gray-300">
+Uganda's smart price comparison platform.
+</p>
+</div>
+ 
+<div>
+<h4 className="font-semibold mb-2">Company</h4>
+<p>About Us</p>
+<p>Contact</p>
+<p>Careers</p>
+</div>
+ 
+<div>
+<h4 className="font-semibold mb-2">Categories</h4>
+<p>Electronics</p>
+<p>Insurance</p>
+<p>Property</p>
+</div>
+ 
+<div>
+<h4 className="font-semibold mb-2">Follow Us</h4>
+<p>Facebook</p>
+<p>X</p>
+<p>Instagram</p>
+</div>
+</div>
+</footer>
+</div>
+);
+}
